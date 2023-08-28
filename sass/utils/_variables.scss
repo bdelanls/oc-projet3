@@ -1,13 +1,25 @@
 // Fonts
 $roboto: 'Roboto', sans-serif;
-$Shrikhand: 'Shrikhand', sans-serif;
+$shrikhand: 'Shrikhand', sans-serif;
+
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+
+html{
+    font-family: $roboto;
+    font-weight: $fw-regular;
+    font-size: 16px;
+}
 
 // Colors
 $background: #F3F3F3;
 $grey: #7E7E7E;
 $dark-grey: #353535;
 $primary: #9356DC;
-$green: #99E2D0;
+$secondary: #ff79DA;
+$tertiary: #99E2D0;
 $dark-green: #008766;
 $blue: #89C8FA;
 $dark-blue: #003A68;
