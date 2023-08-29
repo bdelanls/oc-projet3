@@ -8,10 +8,12 @@
 @import "utils/functions";
 
 // layouts (header, footer, formulaire…)
+@import "layouts/layouts";
 @import "layouts/header";
 @import "layouts/footer";
 
 // components (boutons, inputs, icônes…)
+@import "components/buttons";
 
 // pages (home, blog...)
 @import "pages/home";

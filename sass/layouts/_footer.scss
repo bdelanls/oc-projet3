@@ -1,9 +1,7 @@
 /* footer */
 
 .footer-wrap{
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    @extend .wrap;
     background-color: $dark-grey;
 
     @include tablet{}
