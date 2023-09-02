@@ -34,6 +34,9 @@
         font-weight: $fw-bold;
         text-align: center;
         margin-bottom: 35px;
+        transition: all 0.5s;
+
+        @include tablet{font-size: 40px;}
     }
     p{
         font-size: 18px;
@@ -55,7 +58,17 @@
 
 .action{
     width: 100%;
-    padding: 40px 20px 40px 25px;
+    padding: 55px 20px 55px 25px;
+    // transition: all 0.5s;
+
+    @include tablet{
+        padding: 40px 8%;
+    }
+
+    @include desktop{
+        max-width: 1440px;
+        padding: 40px 180px; // 180px - 12,5%
+    }
 
     &__title{
         @extend .title;
@@ -68,6 +81,10 @@
         align-items: center;
         gap: 20px;
 
+        @include tablet{
+            flex-direction: row;
+            gap: 35px;
+        }
     }
 
     &__card{
@@ -84,7 +101,6 @@
             font-size: 16px;
             font-weight: $fw-regular;
         }
-
     }
 
     &__picto{
@@ -93,7 +109,6 @@
         &--grey{color: $grey;}
         &--primary{color: $primary;}
         &--xl{font-size: 1.1em;}
-
     }
 
     &__number{
@@ -108,9 +123,119 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 12px;
-        
+        border-radius: 12px;  
     }
 
     
+
 }
+
+// Restaurants
+.restaurants-wrap{
+    @extend .wrap;
+}
+
+.restaurants{
+    width: 100%;
+    padding: 55px 17px 70px 17px;
+
+    &__title{
+        @extend .title;
+        margin-bottom: 20px;
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include tablet{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 45px;
+        }
+    }
+
+    @include tablet{
+        padding: 40px 8%;
+    }
+
+    @include desktop{
+        max-width: 1440px;
+        padding: 40px 180px; // 180px - 12,5%
+    }
+
+}
+
+.resto{
+    width: 100%;
+    background-color: $white;
+    border-radius: 15px;
+    position: relative;
+
+    a{
+        //width: 100%;
+        color: $black;
+        text-decoration: none;
+    }
+
+    &__content_picture{
+        width: 100%;
+        position: relative;
+    }
+    &__picture{
+        width: 100%;
+        border-radius: 15px 15px 0 0;
+        height: 175px;
+        object-fit: cover;
+        object-position: center center;
+    }
+    &__label{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 14px;
+        font-weight: $fw-regular;
+        color: $dark-green;
+        background-color: $tertiary;
+        padding: 7px 10px;
+        border-radius: 2px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    }
+    &__text{
+        width: 100%;
+        padding: 13px 13px 18px 13px;
+        display: flex;
+        flex-direction: column;
+
+        @include tablet{
+            padding: 18px 18px 20px 18px;
+        }
+
+    }
+    &__title{
+        font-size: 18px;
+        font-weight: $fw-bold;
+        margin-bottom: 6px;
+    }
+    &__city{
+        font-size: 17px;
+        font-weight: $fw-light;
+    }
+    &__like{
+        padding: 5px;
+
+    }
+
+    .btn__like{
+        position: absolute;
+        bottom: 37px;
+        right: 20px;
+    }
+
+    @include tablet{
+        max-width: 45%;
+    }
+}
+

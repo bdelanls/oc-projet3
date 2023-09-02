@@ -12,7 +12,66 @@
     transition: all 0.5s;
 
     &:hover{
-        //background: linear-gradient(180deg, lighten($secondary, 5%), lighten($primary, 5%));
         filter: brightness(1.15);
+        cursor: pointer;
+    }
+}
+
+
+
+$heart: '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">' +
+        '<path d="M12,21.9C6.2,16.2,0.6,11.3,0.6,7c0-3.9,3.2-5.4,5.5-5.4c1.4,0,4.3,0.5,5.9,4.6c1.6-4.1,4.6-4.6,5.9-4.6c2.6,0,5.4,1.7,5.4,5.4C23.4,11.2,18.1,15.9,12,21.9z" ' +
+        'fill="#FFFFFF" stroke="#000000"/></svg>';
+
+$heart-hover: '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">' +
+              '<path class="st" d="M12,21.9C6.2,16.2,0.6,11.3,0.6,7c0-3.9,3.2-5.4,5.5-5.4c1.4,0,4.3,0.5,5.9,4.6c1.6-4.1,4.6-4.6,5.9-4.6c2.6,0,5.4,1.7,5.4,5.4C23.4,11.2,18.1,15.9,12,21.9z" ' +
+              'fill="url(#gradient)" stroke="none" />' + 
+              '<defs><linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">' + 
+              '<stop offset="0%" stop-color="#9356DC" /><stop offset="100%" stop-color="#FF79DA" /></linearGradient>' + 
+              '</defs></svg>';
+
+.btn__like{
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    position: relative;
+    background-color: $white;
+    overflow: hidden;
+    
+
+    span{
+        margin-left: -100px;
+    }
+
+    &:before, &:after{
+        content: "";
+        opacity: 1;
+        width: 24px;
+        height: 24px;
+        display: block;
+        position: absolute;
+        top: 0;
+    }
+    
+    &:before{
+        background-image: svg-url($heart);
+        transition: all .5s ease-in-out;
+        z-index: 10;
+        
+    }
+    
+    &:after{
+        background-image: svg-url($heart-hover);
+        z-index: 5;
+    }
+    
+    &:hover:before{
+        opacity: 0;
+        cursor: pointer;
+    } 
+
+    &--active:before{
+        opacity: 0;
     }
 }

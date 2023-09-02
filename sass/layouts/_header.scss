@@ -10,12 +10,14 @@
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     position: relative;
     background-color: $white;
+    // transition: all 0.5s;
 
     @include tablet{height: 96px;}
 
 
     &__logo{
         width: 162px;
+        // transition: all 0.5s;
         @include tablet{width: 200px;}
     }
 }
