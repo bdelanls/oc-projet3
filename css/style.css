@@ -286,6 +286,35 @@ html {
   opacity: 0;
 }
 
+/* Loader */
+.loader-wrap {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform-origin: top center;
+  animation-duration: 3s;
+  animation-delay: 3s;
+}
+
+@keyframes loader-wrap {
+  0% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}
 /* Homepage */
 .location-wrap {
   background-color: #EAEAEA;
