@@ -11,6 +11,11 @@
     padding: 15px 20px;
     transition: all 0.5s;
 
+    a{
+        color: $white;
+        text-decoration: none;
+    }
+
     &:hover{
         filter: brightness(1.15);
         cursor: pointer;
@@ -20,15 +25,17 @@
 
 
 
+$heart-path: '<path d="M12,21.9C6.2,16.2,0.6,11.3,0.6,7c0-3.9,3.2-5.4,5.5-5.4c1.4,0,4.3,0.5,5.9,4.6c1.6-4.1,4.6-4.6,5.9-4.6c2.6,0,5.4,1.7,5.4,5.4C23.4,11.2,18.1,15.9,12,21.9z" ';
+
 $heart: '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">' +
-        '<path d="M12,21.9C6.2,16.2,0.6,11.3,0.6,7c0-3.9,3.2-5.4,5.5-5.4c1.4,0,4.3,0.5,5.9,4.6c1.6-4.1,4.6-4.6,5.9-4.6c2.6,0,5.4,1.7,5.4,5.4C23.4,11.2,18.1,15.9,12,21.9z" ' +
-        'fill="#FFFFFF" stroke="#000000"/></svg>';
+        $heart-path +
+        'fill="'+ $white +'" stroke="'+ $black +'" stroke-width="1.2" /></svg>';
 
 $heart-hover: '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">' +
-              '<path class="st" d="M12,21.9C6.2,16.2,0.6,11.3,0.6,7c0-3.9,3.2-5.4,5.5-5.4c1.4,0,4.3,0.5,5.9,4.6c1.6-4.1,4.6-4.6,5.9-4.6c2.6,0,5.4,1.7,5.4,5.4C23.4,11.2,18.1,15.9,12,21.9z" ' +
+              $heart-path +
               'fill="url(#gradient)" stroke="none" />' + 
               '<defs><linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">' + 
-              '<stop offset="0%" stop-color="#9356DC" /><stop offset="100%" stop-color="#FF79DA" /></linearGradient>' + 
+              '<stop offset="0%" stop-color="' + $primary + '" /><stop offset="100%" stop-color="' + $secondary + '" /></linearGradient>' + 
               '</defs></svg>';
 
 .btn__like{
@@ -45,7 +52,7 @@ $heart-hover: '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" vi
         margin-left: -100px;
     }
 
-    &:before, &:after{
+    &::before, &::after{
         content: "";
         opacity: 1;
         width: 24px;
@@ -55,24 +62,24 @@ $heart-hover: '<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" vi
         top: 0;
     }
     
-    &:before{
+    &::before{
         background-image: svg-url($heart);
         transition: all .5s ease-in-out;
         z-index: 10;
         
     }
     
-    &:after{
+    &::after{
         background-image: svg-url($heart-hover);
         z-index: 5;
     }
     
-    &:hover:before{
+    &:hover::before{
         opacity: 0;
         cursor: pointer;
     } 
 
-    &--active:before{
+    &--active::before{
         opacity: 0;
     }
 }

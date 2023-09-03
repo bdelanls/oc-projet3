@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
 </head>
 <body>
     <header class="header">
@@ -24,11 +22,11 @@
             <div class="lead">
                 <h1>Réservez le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <button class="lead__btn">Explorer nos restaurants</button>
+                <div class="lead__btn"><a href="#restaurants">Explorer nos restaurants</a></div>
             </div>
         </div>
         <div class="action-wrap">
-            <div class="action">
+            <section class="action">
                 <h2 class="action__title">Fonctionnement</h2>
                 <ol class="action__cardlist">
                     <li class="action__card">
@@ -47,11 +45,11 @@
                         <h3>Dégustez au restaurant</h3>
                     </li>
                 </ol>
-            </div>
+            </section>
         </div>
         <!-- Restaurants -->
-        <section class="restaurants-wrap">
-            <div class="restaurants">
+        <div class="restaurants-wrap" id="restaurants">
+            <section class="restaurants">
                 <h2 class="restaurants__title">Restaurants</h2>
                 <div class="restaurants__list">
                     <article class="resto">
@@ -65,12 +63,12 @@
                                 <p class="resto__city">Ménilmontant</p>
                             </div>
                         </a>
-                        <button class="btn__like" title="J'aime"><span>LIKE</span></button>
+                        <button class="btn__like" title="J'aime"><span>J'AIME</span></button>
                     </article>
                     <article class="resto">
                         <a href="#">
                             <div class="resto__content_picture">
-                                <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" class="resto__picture" alt="La palette du goût">
+                                <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" class="resto__picture" alt="La note enchantée">
                                 <div class="resto__label">Nouveau</div>
                             </div>
                             <div class="resto__text">
@@ -78,35 +76,35 @@
                                 <p class="resto__city">Charonne</p>
                             </div>
                         </a>
-                        <button class="btn__like btn__like--active" title="J'aime"><span>LIKE</span></button>
+                        <button class="btn__like" title="J'aime"><span>J'AIME</span></button>
                     </article>
                     <article class="resto">
                         <a href="#">
                             <div class="resto__content_picture">
-                                <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" class="resto__picture" alt="La palette du goût">
+                                <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" class="resto__picture" alt="À la française">
                             </div>
                             <div class="resto__text">
-                                <h3 class="resto__title">La palette du goût</h3>
-                                <p class="resto__city">Ménilmontant</p>
+                                <h3 class="resto__title">À la française</h3>
+                                <p class="resto__city">Cité Rouge</p>
                             </div>
                         </a>
-                        <button class="btn__like" title="J'aime"><span>LIKE</span></button>
+                        <button class="btn__like" title="J'aime"><span>J'AIME</span></button>
                     </article>
                     <article class="resto">
                         <a href="#">
                             <div class="resto__content_picture">
-                                <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" class="resto__picture" alt="La palette du goût">
+                                <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" class="resto__picture" alt="Le délice des sens">
                             </div>
                             <div class="resto__text">
-                                <h3 class="resto__title">La palette du goût</h3>
-                                <p class="resto__city">Ménilmontant</p>
+                                <h3 class="resto__title">Le délice des sens</h3>
+                                <p class="resto__city">Folie-Méricourt</p>
                             </div>
                         </a>
-                        <button class="btn__like" title="J'aime"><span>LIKE</span></button>
+                        <button class="btn__like" title="J'aime"><span>J'AIME</span></button>
                     </article>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
     <footer class="footer-wrap">
         <div class="footer">
@@ -124,7 +122,7 @@
                         <a href="#">Mentions légales</a>
                     </li>
                     <li class="footer__nav--reg">
-                        <a href="#">Contact</a>
+                        <a href="mailto:contact@ohmyfood.com">Contact</a>
                     </li>
                 </ul>
             </nav>

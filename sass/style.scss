@@ -2,7 +2,7 @@
 @import "base/reset";
 @import "base/typography";
 
-// utils (variables, mixins, functions)
+// utils
 @import "utils/variables";
 @import "utils/mixins";
 @import "utils/functions";
@@ -15,10 +15,11 @@
 // components (boutons, inputs, icônes…)
 @import "components/buttons";
 
-// pages (home, blog...)
+// pages
 @import "pages/home";
 
-// themes (utilisateur, admin)
+// themes
 
-// vendors (Bootstrap...)
+// vendors
+// fontawesome.scss
 
