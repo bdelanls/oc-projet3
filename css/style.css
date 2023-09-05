@@ -379,7 +379,7 @@ html {
     opacity: 0;
     transform: translateY(0);
     filter: blur(0);
-    animation-timing-function: cubic-bezier(ease-in);
+    animation-timing-function: ease-in;
   }
   20% {
     opacity: 0.2;
@@ -398,7 +398,7 @@ html {
     opacity: 0;
     transform: translateY(0);
     filter: blur(0);
-    animation-timing-function: cubic-bezier(ease-in);
+    animation-timing-function: ease-in;
   }
   10% {
     opacity: 0.2;
@@ -417,7 +417,7 @@ html {
     opacity: 0;
     transform: translateY(0);
     filter: blur(0);
-    animation-timing-function: cubic-bezier(ease-in);
+    animation-timing-function: ease-in;
   }
   20% {
     opacity: 0.7;
