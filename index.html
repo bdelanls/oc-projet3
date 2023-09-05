@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood</title>
     <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="css/fontawesome.min.css">
 </head>
 <body>
     <!-- loader -->
@@ -20,7 +19,6 @@
             <div class="loader__fumee loader__fumee--2"></div>
             <div class="loader__fumee loader__fumee--3"></div>
         </div>
-        
     </div>
     <header class="header">
         <img class="header__logo" srcset="images/logo/ohmyfood@2x.svg 2x" src="images/logo/ohmyfood.png" alt="ohmyfood">
@@ -28,7 +26,9 @@
     <main>
         <div class="location-wrap">
             <div class="location">
-                <i class="fa-solid fa-location-dot location__picto"></i>
+                <svg class="svg location__picto">
+                    <use xlink:href="images/pictos/icons.svg#location-dot"></use>
+                </svg>
                 <div class="location__place">Paris, Belleville</div>
             </div>
         </div>
@@ -45,17 +45,23 @@
                 <ol class="action__cardlist">
                     <li class="action__card">
                         <div class="action__number">1</div>
-                        <i class="fa-solid fa-mobile-screen-button action__picto action__picto--grey action__picto--xl"></i>
+                        <svg class="svg action__picto action__picto--grey action__picto--xl">
+                            <use xlink:href="images/pictos/icons.svg#mobile-creen-button"></use>
+                        </svg>
                         <h3>Choisissez un restaurant</h3>
                     </li>
                     <li class="action__card">
                         <div class="action__number">2</div>
-                        <i class="fa-solid fa-list-ul action__picto action__picto--grey"></i>
+                        <svg class="svg action__picto action__picto--grey">
+                            <use xlink:href="images/pictos/icons.svg#list-ul-solid"></use>
+                        </svg>
                         <h3>Composez votre menu</h3>
                     </li>
                     <li class="action__card">
                         <div class="action__number">3</div>
-                        <i class="fa-solid fa-store action__picto action__picto--primary"></i>
+                        <svg class="svg action__picto action__picto--primary action__picto--xl">
+                            <use xlink:href="images/pictos/icons.svg#store-solid"></use>
+                        </svg>
                         <h3>Dégustez au restaurant</h3>
                     </li>
                 </ol>
@@ -125,11 +131,15 @@
             <nav class="footer__nav">
                 <ul>
                     <li class="footer__nav--med">
-                        <i class="fa-solid fa-utensils footer__nav--picto"></i>
+                        <svg class="svg footer__nav--picto">
+                            <use xlink:href="images/pictos/icons.svg#utensils-solid"></use>
+                        </svg>
                         <a href="#">Proposer un restaurant</a>
                     </li>
                     <li class="footer__nav--med">
-                        <i class="fa-solid fa-handshake-angle footer__nav--picto"></i>
+                        <svg class="svg footer__nav--picto">
+                            <use xlink:href="images/pictos/icons.svg#handshake-angle-solid"></use>
+                        </svg>
                         <a href="#">Devenir partenaire</a>
                     </li>
                     <li class="footer__nav--reg footer__nav--ml">

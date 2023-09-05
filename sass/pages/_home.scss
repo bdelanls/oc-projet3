@@ -13,7 +13,7 @@
     justify-content: center;
 
     &__picto{
-        margin-right: 15px;
+        margin-right: 10px;
     }
 }
 
@@ -100,6 +100,7 @@
         h3{
             font-size: 16px;
             font-weight: $fw-regular;
+            line-height: initial;
         }
     }
 
@@ -108,7 +109,7 @@
 
         &--grey{color: $grey;}
         &--primary{color: $primary;}
-        &--xl{font-size: 1.1em;}
+        &--xl{width: 1.2rem; height: 1.2rem;}
     }
 
     &__number{

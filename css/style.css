@@ -122,6 +122,11 @@ html {
   font-weight: 700;
 }
 
+.svg {
+  width: 1rem;
+  height: 1rem;
+}
+
 /* Header */
 .header {
   width: 100%;
@@ -300,7 +305,7 @@ html {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  transform: scaleY(1);
+  transform: scaleY(0);
   transform-origin: top center;
   animation: loader-wrap 3000ms;
 }
@@ -494,7 +499,7 @@ html {
   justify-content: center;
 }
 .location__picto {
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 .lead {
@@ -569,6 +574,7 @@ html {
 .action__card h3 {
   font-size: 16px;
   font-weight: 400;
+  line-height: initial;
 }
 .action__picto {
   margin-right: 15px;
@@ -580,7 +586,8 @@ html {
   color: #9356DC;
 }
 .action__picto--xl {
-  font-size: 1.1em;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 .action__number {
   position: absolute;
