@@ -20,6 +20,7 @@
 // lead
 .lead-wrap{
     @extend .wrap;
+    background-color: $background;
 }
 
 .lead{
@@ -135,6 +136,7 @@
 // Restaurants
 .restaurants-wrap{
     @extend .wrap;
+    background-color: $background;
 }
 
 .restaurants{
