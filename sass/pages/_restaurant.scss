@@ -12,6 +12,9 @@
         transition: all 0.5s;
 
         @include tablet{
+            height: 300px;
+        }
+        @include desktop{
             height: 383px;
         }
     }
@@ -40,6 +43,10 @@
     &__header{
         display: flex;
         justify-content: space-between;
+
+        @include tablet{
+            justify-content: center;
+        }
     }
 
     &__title{
@@ -49,6 +56,126 @@
     }
     &__btn__like{
         @extend .btn__like;
-        margin-right: 20px;
+        margin: 0 20px 0 0;
+
+        @include tablet{
+            margin: 0 0 0 20px;
+        }
     }
+    &__btn__order{
+        @extend .btn-primary;
+        padding: 15px 45px;
+        margin: 40px auto 0 auto;
+    }
+}
+
+.menu-section{
+
+    margin-top: 40px;
+
+    &__title{
+        font-weight: $fw-light;
+        font-size: 16px;
+        text-transform: uppercase;
+
+        &::after{
+            content: "";
+            width: 40px;
+            height: 3px;
+            background-color: $tertiary;
+            display: block;
+            margin-top: 7px;
+        }
+    }
+}
+.menu-card-wrap{
+
+}
+
+.menu-card{
+    background-color: $white;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70px;
+    overflow: hidden;
+    margin: 12px 0;
+
+    
+
+    &__plate{
+        padding: 13px 13px 13px 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+    }
+
+    &__name{
+        font-size: 18px;
+        font-weight: $fw-medium;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        line-height: normal;
+    }
+
+    &__description{
+        font-size: 15px;
+        font-weight: $fw-light;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        line-height: normal;
+    }
+
+    &__price{
+        font-size: 15px;
+        font-weight: $fw-bold;
+        padding: 13px;
+        display: flex;
+        align-items: flex-end;
+        line-height: normal;
+    }
+
+    &__check{
+        border: none;
+        height: 100%;
+        padding: 0;
+        background-color: $tertiary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 60px;
+        margin-right: -60px ;
+        transition: all 200ms ease-in;
+        
+    
+        &::after{
+            content: "";
+            background-image: url("../images/pictos/circle-check-solid.svg");
+            width: 20px;
+            height: 20px;
+            display: block;
+            color: $white;
+        }
+    }
+
+
+    &:hover{
+        cursor: pointer;
+    }
+
+    &:hover > &__check{
+        margin-right: 0;
+
+    }
+
+
 }

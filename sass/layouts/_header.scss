@@ -20,4 +20,24 @@
         // transition: all 0.5s;
         @include tablet{width: 200px;}
     }
+
+    &__nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 63px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--picto{
+            color: $black;
+            transition: color 200ms ease-in;
+        }
+
+        &:hover &--picto{
+            color: $primary;
+        }
+    }
 }

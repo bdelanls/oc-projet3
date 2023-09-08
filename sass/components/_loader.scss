@@ -1,5 +1,6 @@
 /* Loader */
 
+// Loader accueil
 .loader-wrap{
     width: 100vw;
     height: 100vh;
@@ -214,3 +215,55 @@
         
     }
 }
+
+
+
+// loader menu
+
+.menu__content{
+
+    $delay: 0ms;
+    $time: 1000ms;
+
+    @for $i from 1 through 3 {
+
+        .menu-section:nth-child(#{$i + 1}){
+
+            @for $j from 1 through 3 {
+            
+                .menu-card:nth-child(#{$j}){
+                    /*
+                    opacity: 0;
+                    height: 0;
+                    
+                    animation-name: card;
+                    animation-duration: $time;
+                    animation-delay: $delay;
+                    animation-fill-mode: forwards;
+                    */
+                    $delay: $delay + 100ms;
+                    $time: $time - 100ms;
+                    
+                }
+
+            }
+        }
+
+    }
+
+
+}
+
+@keyframes card{
+    from{
+        height: 0px;
+        opacity: 0;
+        filter: blur(10px);
+    }
+    to{
+        height: 70px;
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
