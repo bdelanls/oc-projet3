@@ -852,7 +852,12 @@ html {
   border-radius: 15px 15px 0 0;
   height: 175px;
   object-fit: cover;
-  object-position: center center;
+  object-position: center 95%;
+}
+@media only screen and (min-width: 769px) {
+  .resto__picture {
+    object-position: center 70%;
+  }
 }
 .resto__label {
   position: absolute;
@@ -915,6 +920,7 @@ html {
 @media only screen and (min-width: 769px) {
   .frame__picture {
     height: 300px;
+    object-position: center 58%;
   }
 }
 @media only screen and (min-width: 1440px) {

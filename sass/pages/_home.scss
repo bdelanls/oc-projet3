@@ -193,7 +193,11 @@
         border-radius: 15px 15px 0 0;
         height: 175px;
         object-fit: cover;
-        object-position: center center;
+        object-position: center 95%;
+
+        @include tablet{
+            object-position: center 70%;
+        }
     }
     &__label{
         position: absolute;

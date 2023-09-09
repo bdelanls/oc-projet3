@@ -13,6 +13,7 @@
 
         @include tablet{
             height: 300px;
+            object-position: center 58%;
         }
         @include desktop{
             height: 383px;
