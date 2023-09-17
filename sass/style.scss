@@ -7,12 +7,12 @@
 @import "utils/mixins";
 @import "utils/functions";
 
-// layouts (header, footer, formulaire…)
+// layouts
 @import "layouts/layouts";
 @import "layouts/header";
 @import "layouts/footer";
 
-// components (boutons, inputs, icônes…)
+// components
 @import "components/buttons";
 @import 'components/loader';
 
@@ -23,5 +23,4 @@
 // themes
 
 // vendors
-// fontawesome.scss
 

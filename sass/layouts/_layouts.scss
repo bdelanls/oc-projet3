@@ -3,7 +3,7 @@
 html{
     font-family: $roboto;
     font-weight: $fw-regular;
-    font-size: 16px;
+    font-size: 1rem;
     background-color: $white;
 }
 
@@ -15,7 +15,7 @@ html{
 
 // h2
 .title{
-    font-size: 24px;
+    font-size: rem(24);
     font-weight: $fw-bold;
 }
 

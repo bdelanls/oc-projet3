@@ -31,16 +31,16 @@
     padding: 40px 25px 55px 25px;
 
     h1{
-        font-size: 24px;
+        font-size: rem(24);
         font-weight: $fw-bold;
         text-align: center;
         margin-bottom: 35px;
         transition: all 0.5s;
 
-        @include tablet{font-size: 40px;}
+        @include tablet{font-size: rem(40);}
     }
     p{
-        font-size: 18px;
+        font-size: rem(18);
         font-weight: $fw-light;
         text-align: center;
         margin-bottom: 40px;
@@ -99,7 +99,7 @@
 
 
         h3{
-            font-size: 16px;
+            font-size: rem(16);
             font-weight: $fw-regular;
             line-height: initial;
         }
@@ -119,7 +119,7 @@
         top: 26px;
         background-color: $primary;
         color: $white;
-        font-size: 14px;
+        font-size: rem(14);
         font-weight: $fw-medium;
         width: 24px;
         height: 24px;
@@ -203,7 +203,7 @@
         position: absolute;
         top: 10px;
         right: 10px;
-        font-size: 14px;
+        font-size: rem(14);
         font-weight: $fw-regular;
         color: $dark-green;
         background-color: $tertiary;
@@ -223,12 +223,12 @@
 
     }
     &__title{
-        font-size: 18px;
+        font-size: rem(18);
         font-weight: $fw-bold;
         margin-bottom: 6px;
     }
     &__city{
-        font-size: 17px;
+        font-size: rem(17);
         font-weight: $fw-light;
     }
     &__like{

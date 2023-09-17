@@ -91,23 +91,11 @@ table {
   font-weight: 700;
   src: url("../fonts/roboto-v30-latin-700.woff2") format("woff2");
 }
-/*
-@mixin mobile() {
-	@media only screen and (max-width: 768px){
-		@content;
-	}
-}
-@mixin tablet() {
-	@media only screen and (min-width: 769px) and (max-width: 1023px) {
-		@content;
-	}
-}
-*/
 /* layouts */
 html {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   background-color: #ffffff;
 }
 
@@ -118,7 +106,7 @@ html {
 }
 
 .title, .restaurants__title, .action__title {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -197,7 +185,7 @@ html {
 .footer__logo {
   font-family: "Shrikhand", sans-serif;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 1.125rem;
   margin-bottom: 18px;
   line-height: initial;
 }
@@ -221,12 +209,13 @@ html {
   width: max-content;
 }
 .footer__nav li a {
+  font-size: 1rem;
   color: #ffffff;
   text-decoration: none;
 }
 .footer__nav li a::after {
   content: "";
-  background-color: none;
+  background-color: inherit;
   display: block;
   width: 0%;
   height: 2px;
@@ -255,13 +244,13 @@ html {
   }
 }
 .footer__nav--picto {
-  font-size: 14px;
+  font-size: 0.875rem;
   margin-right: 5px;
 }
 
 /* buttons */
 .btn-primary, .menu__btn__order, .lead__btn {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   color: #ffffff;
   width: max-content;
@@ -273,6 +262,7 @@ html {
   transition: all 0.5s;
 }
 .btn-primary a, .menu__btn__order a, .lead__btn a {
+  font-size: 1rem;
   color: #ffffff;
   text-decoration: none;
 }
@@ -282,53 +272,6 @@ html {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/*              
-.btn__like{
-    width: 24px;
-    height: 24px;
-    padding: 0;
-    border: none;
-    position: relative;
-    background-color: inherit;
-    overflow: hidden;
-
-
-    span{
-        margin-left: -100px;
-    }
-
-    &::before, &::after{
-        content: "";
-        opacity: 1;
-        width: 24px;
-        height: 24px;
-        display: block;
-        position: absolute;
-        top: 0;
-    }
-
-    &::before{
-        background-image: svg-url($heart);
-        transition: all .5s ease-in-out;
-        z-index: 10;
-
-    }
-
-    &::after{
-        background-image: svg-url($heart-hover);
-        z-index: 5;
-    }
-
-    &:hover::before{
-        opacity: 0;
-        cursor: pointer;
-    } 
-
-    &--active::before{
-        opacity: 0;
-    }
-}
-*/
 .btn__like, .menu__btn__like {
   width: 24px;
   height: 24px;
@@ -387,11 +330,7 @@ html {
 }
 
 @keyframes loader-wrap {
-  0% {
-    transform: scaleY(1);
-    opacity: 1;
-  }
-  90% {
+  0%, 90% {
     transform: scaleY(1);
     opacity: 1;
   }
@@ -406,10 +345,7 @@ html {
   opacity: 0;
 }
 @keyframes loader {
-  0% {
-    opacity: 1;
-  }
-  80% {
+  0%, 80% {
     opacity: 1;
   }
   100% {
@@ -495,10 +431,7 @@ html {
     filter: blur(0);
     animation-timing-function: ease-in;
   }
-  20% {
-    opacity: 0.7;
-  }
-  70% {
+  20%, 70% {
     opacity: 0.7;
   }
   100% {
@@ -551,10 +484,7 @@ html {
   40% {
     transform: rotate(8deg);
   }
-  45% {
-    transform: rotate(7deg);
-  }
-  90% {
+  45%, 90% {
     transform: rotate(7deg);
     animation-timing-function: ease-out;
   }
@@ -564,103 +494,112 @@ html {
 }
 
 .menu__content .menu-section:nth-child(2) .menu-card:nth-child(1) {
-  /*
   opacity: 0;
   height: 0;
-
   animation-name: card;
-  animation-duration: $time;
-  animation-delay: $delay;
-  animation-fill-mode: forwards;
-  */
+  animation-duration: 0.7s;
+  animation-delay: 300ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
 }
 .menu__content .menu-section:nth-child(2) .menu-card:nth-child(2) {
-  /*
   opacity: 0;
   height: 0;
-
   animation-name: card;
-  animation-duration: $time;
-  animation-delay: $delay;
-  animation-fill-mode: forwards;
-  */
+  animation-duration: 0.7s;
+  animation-delay: 400ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
 }
 .menu__content .menu-section:nth-child(2) .menu-card:nth-child(3) {
-  /*
   opacity: 0;
   height: 0;
-
   animation-name: card;
-  animation-duration: $time;
-  animation-delay: $delay;
-  animation-fill-mode: forwards;
-  */
+  animation-duration: 0.7s;
+  animation-delay: 500ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+.menu__content .menu-section:nth-child(2) .menu-card:nth-child(4) {
+  opacity: 0;
+  height: 0;
+  animation-name: card;
+  animation-duration: 0.7s;
+  animation-delay: 600ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
 }
 .menu__content .menu-section:nth-child(3) .menu-card:nth-child(1) {
-  /*
   opacity: 0;
   height: 0;
-
   animation-name: card;
-  animation-duration: $time;
-  animation-delay: $delay;
-  animation-fill-mode: forwards;
-  */
+  animation-duration: 0.7s;
+  animation-delay: 700ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
 }
 .menu__content .menu-section:nth-child(3) .menu-card:nth-child(2) {
-  /*
   opacity: 0;
   height: 0;
-
   animation-name: card;
-  animation-duration: $time;
-  animation-delay: $delay;
-  animation-fill-mode: forwards;
-  */
+  animation-duration: 0.7s;
+  animation-delay: 800ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
 }
 .menu__content .menu-section:nth-child(3) .menu-card:nth-child(3) {
-  /*
   opacity: 0;
   height: 0;
-
   animation-name: card;
-  animation-duration: $time;
-  animation-delay: $delay;
-  animation-fill-mode: forwards;
-  */
+  animation-duration: 0.7s;
+  animation-delay: 900ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+.menu__content .menu-section:nth-child(3) .menu-card:nth-child(4) {
+  opacity: 0;
+  height: 0;
+  animation-name: card;
+  animation-duration: 0.7s;
+  animation-delay: 1000ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
 }
 .menu__content .menu-section:nth-child(4) .menu-card:nth-child(1) {
-  /*
   opacity: 0;
   height: 0;
-
   animation-name: card;
-  animation-duration: $time;
-  animation-delay: $delay;
-  animation-fill-mode: forwards;
-  */
+  animation-duration: 0.7s;
+  animation-delay: 1100ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
 }
 .menu__content .menu-section:nth-child(4) .menu-card:nth-child(2) {
-  /*
   opacity: 0;
   height: 0;
-
   animation-name: card;
-  animation-duration: $time;
-  animation-delay: $delay;
-  animation-fill-mode: forwards;
-  */
+  animation-duration: 0.7s;
+  animation-delay: 1200ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
 }
 .menu__content .menu-section:nth-child(4) .menu-card:nth-child(3) {
-  /*
   opacity: 0;
   height: 0;
-
   animation-name: card;
-  animation-duration: $time;
-  animation-delay: $delay;
-  animation-fill-mode: forwards;
-  */
+  animation-duration: 0.7s;
+  animation-delay: 1300ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+.menu__content .menu-section:nth-child(4) .menu-card:nth-child(4) {
+  opacity: 0;
+  height: 0;
+  animation-name: card;
+  animation-duration: 0.7s;
+  animation-delay: 1400ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
 }
 
 @keyframes card {
@@ -702,7 +641,7 @@ html {
   padding: 40px 25px 55px 25px;
 }
 .lead h1 {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   text-align: center;
   margin-bottom: 35px;
@@ -710,11 +649,11 @@ html {
 }
 @media only screen and (min-width: 769px) {
   .lead h1 {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 }
 .lead p {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 300;
   text-align: center;
   margin-bottom: 40px;
@@ -764,7 +703,7 @@ html {
   position: relative;
 }
 .action__card h3 {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   line-height: initial;
 }
@@ -787,7 +726,7 @@ html {
   top: 26px;
   background-color: #9356DC;
   color: #ffffff;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 500;
   width: 24px;
   height: 24px;
@@ -863,7 +802,7 @@ html {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   color: #008766;
   background-color: #99E2D0;
@@ -883,12 +822,12 @@ html {
   }
 }
 .resto__title {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
   margin-bottom: 6px;
 }
 .resto__city {
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: 300;
 }
 .resto__like {
@@ -958,7 +897,7 @@ html {
 }
 .menu__title {
   font-family: "Shrikhand", sans-serif;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-weight: 400;
 }
 .menu__btn__like {
@@ -979,7 +918,7 @@ html {
 }
 .menu-section__title {
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1rem;
   text-transform: uppercase;
 }
 .menu-section__title::after {
@@ -1013,7 +952,7 @@ html {
   overflow: hidden;
 }
 .menu-card__name {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 500;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1021,7 +960,7 @@ html {
   line-height: normal;
 }
 .menu-card__description {
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 300;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1029,7 +968,7 @@ html {
   line-height: normal;
 }
 .menu-card__price {
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 700;
   padding: 13px;
   display: flex;
